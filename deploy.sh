@@ -11,7 +11,6 @@
 # Script will fail if any command fails when this is set
 set -e
 
-AWS_PROFILE=personal
 # Check if AWS PROFILE is set, else creds should be ENV VARS
 if [ -n "$AWS_PROFILE" ]
 then
