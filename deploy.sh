@@ -11,6 +11,7 @@
 # Script will fail if any command fails when this is set
 set -e
 
+AWS_PROFILE=personal
 # Check if AWS PROFILE is set, else creds should be ENV VARS
 if [ -n "$AWS_PROFILE" ]
 then
@@ -25,3 +26,7 @@ fi
 
 echo "Running terraform validate..."
 terraform validate
+echo "Running terraform init..."
+terraform init
+echo "Running terraform apply..."
+terraform apply
