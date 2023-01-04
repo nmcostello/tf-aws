@@ -6,9 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🚀 Running terraform code 🚀"
-      - run: echo "OS=${{ runner.os }}\n BRANCH=${{ github.ref }}\n REPO=${{ github.repository }}"
+      - run: echo "OS=${{ runner.os }} BRANCH=${{ github.ref }} REPO=${{ github.repository }}"
       - name: Check out repository code
         uses: actions/checkout@v3
+      - run: echo "AWS=$AWS_ACCESS_KEY_ID"
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - name: Run terraform deployment script
         run: |
